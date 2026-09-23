@@ -42,4 +42,4 @@ Two tests that require the separately licensed bundled model binary/metadata ski
 - Decide later whether any deployment assets outside the backend should be added; they are intentionally outside this backend-only candidate.
 - Citation and Zenodo templates are `CITATION.cff.template` and `zenodo.json.template`; they are not final publication metadata.
 
-No final `LICENSE`, Git remote, Git tag, DOI, or public repository has been created here.
+No final `LICENSE` or DOI has been issued. This staging repository has a local commit and provisional local-only `v0.1.0-rc.1` tag; its `origin` points to the private, currently empty GitHub repository. No source has been pushed and no public release exists.
