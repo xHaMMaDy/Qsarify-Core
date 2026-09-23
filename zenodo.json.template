@@ -13,7 +13,7 @@
     { "name": "Sameh E. Hassanein", "affiliation": "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt" }
   ],
   "version": "0.1.0-rc.1",
-  "license": "REPLACE_WITH_AUTHOR_APPROVED_SPDX_EXPRESSION",
+  "license": "MIT",
   "related_identifiers": [
     { "identifier": "REPLACE_WITH_APPROVED_PUBLIC_REPOSITORY_URL", "relation": "isSupplementTo", "scheme": "url" }
   ],

@@ -34,4 +34,4 @@ authors:
     affiliation: "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt"
     email: "sibrahem@nu.edu.eg"
 repository-code: "REPLACE_WITH_APPROVED_PUBLIC_REPOSITORY_URL"
-license: "REPLACE_WITH_APPROVED_SPDX_EXPRESSION"
+license: "MIT"

@@ -1,6 +1,6 @@
 # Qsarify-Core — backend-only repository candidate
 
-Status: local, unpublished staging copy. Intended GitHub destination requested: `xHaMMaDy/Qsarify-Core`. Visibility and license are not yet finalized, so this folder is not pushed.
+Status: MIT-licensed prerelease candidate for the requested backend-only `xHaMMaDy/Qsarify-Core` repository. The GitHub repository is private; coauthor/institutional redistribution approval is still needed before any public release.
 
 ## Scope
 
@@ -36,10 +36,9 @@ Two tests that require the separately licensed bundled model binary/metadata ski
 
 ## Release decisions still pending
 
-- Confirm whether `Apache-2.0; MIT` means dual license `Apache-2.0 OR MIT`, or choose a single license.
-- Confirm all authors/institutional rights holders authorize that license for the backend source.
-- Confirm repository visibility (public/private) and the first release version/tag.
+- Obtain all authors'/institutional rights holders' approval for public redistribution of the backend source under MIT.
+- Keep the GitHub repository private until public-release approval; the current `v0.1.0-rc.1` is a prerelease candidate, not a stable release.
 - Decide later whether any deployment assets outside the backend should be added; they are intentionally outside this backend-only candidate.
 - Citation and Zenodo templates are `CITATION.cff.template` and `zenodo.json.template`; they are not final publication metadata.
 
-No final `LICENSE` or DOI has been issued. This staging repository has a local commit and provisional local-only `v0.1.0-rc.1` tag; its `origin` points to the private, currently empty GitHub repository. No source has been pushed and no public release exists.
+The MIT `LICENSE` is included. The private repository is staging only; public release remains gated on redistribution approvals and reviewer-demo readiness. No public release or DOI exists.

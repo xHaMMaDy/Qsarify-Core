@@ -10,6 +10,7 @@ import os
 from pathlib import Path
 from datetime import datetime, timezone
 from typing import Any, Mapping
+from uuid import UUID
 
 import requests
 from dotenv import load_dotenv
@@ -49,6 +50,28 @@ class SupabaseWorkerStore:
         if not response.content:
             return None
         return response.json()
+
+    def get_training_datasets_for_run(self, dataset_ids: list[str], workspace_id: str, user_id: str) -> list[dict[str, Any]]:
+        """Load only datasets owned by the run's user and Study via Supabase REST."""
+        try:
+            normalized_ids = sorted({str(UUID(str(value))) for value in dataset_ids})
+            normalized_workspace_id = str(UUID(str(workspace_id)))
+            normalized_user_id = str(UUID(str(user_id)))
+        except (AttributeError, TypeError, ValueError):
+            return []
+        if not normalized_ids:
+            return []
+        return self.request(
+            "GET",
+            "ti_training_datasets",
+            params={
+                "select": "id,workspace_target_id,status,curated_records,records",
+                "id": f"in.({','.join(normalized_ids)})",
+                "workspace_id": f"eq.{normalized_workspace_id}",
+                "user_id": f"eq.{normalized_user_id}",
+                "limit": str(len(normalized_ids)),
+            },
+        ) or []
 
     def get_run(self, run_id: str) -> dict[str, Any] | None:
         rows = self.request("GET", "ti_runs", params={"id": f"eq.{run_id}", "limit": 1})

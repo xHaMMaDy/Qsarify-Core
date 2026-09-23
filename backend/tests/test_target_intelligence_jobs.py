@@ -109,6 +109,41 @@ def test_worker_store_claim_is_atomic_and_filters_created_state():
     assert captured["payload"]["progress_stage"] == "validating"
 
 
+def test_training_dataset_lookup_uses_supabase_rest_and_owner_scope():
+    store = SupabaseWorkerStore.__new__(SupabaseWorkerStore)
+    captured = {}
+    expected = [{"id": "00000000-0000-0000-0000-000000000020", "status": "ready_for_training"}]
+
+    def fake_request(method, path, *, params=None, payload=None):
+        captured.update({"method": method, "path": path, "params": params, "payload": payload})
+        return expected
+
+    store.request = fake_request
+    rows = store.get_training_datasets_for_run(
+        ["00000000-0000-0000-0000-000000000020"],
+        "00000000-0000-0000-0000-000000000001",
+        "00000000-0000-0000-0000-000000000099",
+    )
+
+    assert rows == expected
+    assert captured["method"] == "GET"
+    assert captured["path"] == "ti_training_datasets"
+    assert captured["params"]["workspace_id"] == "eq.00000000-0000-0000-0000-000000000001"
+    assert captured["params"]["user_id"] == "eq.00000000-0000-0000-0000-000000000099"
+    assert captured["params"]["select"] == "id,workspace_target_id,status,curated_records,records"
+
+
+def test_training_dataset_lookup_rejects_malformed_ids_before_request():
+    store = SupabaseWorkerStore.__new__(SupabaseWorkerStore)
+    store.request = lambda *_args, **_kwargs: (_ for _ in ()).throw(AssertionError("unexpected request"))
+
+    assert store.get_training_datasets_for_run(
+        ["not-a-uuid"],
+        "00000000-0000-0000-0000-000000000001",
+        "00000000-0000-0000-0000-000000000099",
+    ) == []
+
+
 def test_pending_worker_skips_run_claimed_by_another_worker():
     class FakeStore:
         def request(self, *_args, **_kwargs):
