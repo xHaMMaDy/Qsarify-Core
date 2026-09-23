@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+flask_session/
+uploads/
+logs/
+models/sessions/
+tests/
+experiments/
+.vscode/
+*.log

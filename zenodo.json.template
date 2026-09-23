@@ -1,0 +1,21 @@
+{
+  "title": "Qsarify-Core",
+  "upload_type": "software",
+  "description": "Backend-only source candidate for QSARify. Finalize the description against the approved repository tag and manuscript before deposit.",
+  "creators": [
+    { "name": "Ibrahim Abdelkarim Hammad", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Amr M. Alhfnawy", "affiliation": "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Mira Moheb Attia", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Mohamad Maged", "affiliation": "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Reem Sharaf ElDeen Hassan", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Abdelrahman Wagih", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Lorans Gergis Labeeb", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
+    { "name": "Sameh E. Hassanein", "affiliation": "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt" }
+  ],
+  "version": "0.1.0-rc.1",
+  "license": "REPLACE_WITH_AUTHOR_APPROVED_SPDX_EXPRESSION",
+  "related_identifiers": [
+    { "identifier": "REPLACE_WITH_APPROVED_PUBLIC_REPOSITORY_URL", "relation": "isSupplementTo", "scheme": "url" }
+  ],
+  "notes": "Corresponding author: Sameh E. Hassanein (sibrahem@nu.edu.eg). Template only. Zenodo assigns the DOI after deposit; do not invent or pre-fill it."
+}

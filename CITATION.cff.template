@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: >-
+  If you use Qsarify-Core, cite the versioned software release. This is a
+  pre-release template; fill repository, approved license, and final version
+  only after author approval and publication.
+title: "Qsarify-Core"
+type: software
+version: "0.1.0-rc.1"
+date-released: "2026-09-23"
+authors:
+  - family-names: "Hammad"
+    given-names: "Ibrahim Abdelkarim"
+    affiliation: "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Alhfnawy"
+    given-names: "Amr M."
+    affiliation: "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Attia"
+    given-names: "Mira Moheb"
+    affiliation: "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Maged"
+    given-names: "Mohamad"
+    affiliation: "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Hassan"
+    given-names: "Reem Sharaf ElDeen"
+    affiliation: "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Wagih"
+    given-names: "Abdelrahman"
+    affiliation: "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Labeeb"
+    given-names: "Lorans Gergis"
+    affiliation: "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt"
+  - family-names: "Hassanein"
+    given-names: "Sameh E."
+    affiliation: "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt"
+    email: "sibrahem@nu.edu.eg"
+repository-code: "REPLACE_WITH_APPROVED_PUBLIC_REPOSITORY_URL"
+license: "REPLACE_WITH_APPROVED_SPDX_EXPRESSION"

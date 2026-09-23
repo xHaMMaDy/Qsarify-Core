@@ -1,0 +1,70 @@
+{
+  "contract_version": "workspace-v2-p0",
+  "feature_flag": "target_modeling_workspace_v2",
+  "limits": {
+    "max_targets_per_study": 20,
+    "low_activity_warning_threshold": 50
+  },
+  "study_steps": [
+    "overview",
+    "plan",
+    "data",
+    "datasets",
+    "training",
+    "review",
+    "deploy",
+    "playground"
+  ],
+  "roles": ["owner", "editor", "reviewer", "viewer", "admin"],
+  "study_statuses": [
+    "draft",
+    "planning",
+    "ready_for_collection",
+    "collecting",
+    "data_review",
+    "ready_for_training",
+    "training",
+    "candidate_review",
+    "ready_for_deployment",
+    "deploying",
+    "ready",
+    "archived",
+    "deleting",
+    "deleted",
+    "failed",
+    "cancelling",
+    "cancelled"
+  ],
+  "collection_job_statuses": ["queued", "validating", "collecting", "completed", "failed", "cancelling", "cancelled", "retrying"],
+  "dataset_statuses": ["planned", "collecting", "collected", "curating", "curated", "preparing", "ready_for_training", "failed", "superseded"],
+  "training_run_statuses": ["queued", "validating", "featurizing", "training", "evaluating", "ready_for_review", "failed", "retrying", "cancelling", "cancelled"],
+  "model_statuses": ["training", "ready_for_review", "approved", "rejected", "deploying", "deployed", "disabled", "failed"],
+  "deployment_statuses": ["draft", "validating", "active", "disabled", "failed", "superseded"],
+  "legacy_api": {
+    "workspace_list": "/api/target-intelligence/workspaces",
+    "workspace_targets": "/api/target-intelligence/workspaces/:workspaceId/targets",
+    "study_plan": "/api/target-intelligence/workspaces/:workspaceId/study-plan",
+    "datasets": "/api/target-intelligence/workspaces/:workspaceId/datasets",
+    "training_runs": "/api/target-intelligence/workspaces/:workspaceId/training-runs",
+    "artifacts": "/api/target-intelligence/workspaces/:workspaceId/artifacts",
+    "deployments": "/api/target-intelligence/workspaces/:workspaceId/deployments"
+  },
+  "error_envelope": {
+    "required": ["error"],
+    "optional": ["code", "request_id", "details"]
+  },
+  "job_event_public_fields": [
+    "id",
+    "workspace_id",
+    "job_id",
+    "sequence",
+    "entity_type",
+    "event_type",
+    "status",
+    "progress_percent",
+    "safe_message",
+    "public_payload",
+    "created_at"
+  ]
+}
+
