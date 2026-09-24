@@ -1,7 +1,7 @@
 {
-  "title": "Qsarify-Core",
+  "title": "Qsarify-Core — backend-only source",
   "upload_type": "software",
-  "description": "Future-version template. Use zenodo.json for the prepared v0.1.0-rc.2 deposit metadata.",
+  "description": "Backend-only prerelease source for QSARify: Flask API, services, jobs, tests, requirements, and additive Target Modeling Workspace V2 migrations. Excludes the frontend, production data, ChEMBL caches, user uploads, logs, runtime state, and serialized model artifacts. This prerelease is not a stable 1.0 API commitment.",
   "creators": [
     { "name": "Ibrahim Abdelkarim Hammad", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
     { "name": "Amr M. Alhfnawy", "affiliation": "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt" },
@@ -12,10 +12,15 @@
     { "name": "Lorans Gergis Labeeb", "affiliation": "Bioinformatics Program, School of Biotechnology, Nile University, Giza, Egypt" },
     { "name": "Sameh E. Hassanein", "affiliation": "Biotechnology Research and Innovation Centre (BRIC), School of Biotechnology, Nile University, Giza, Egypt" }
   ],
-  "version": "REPLACE_WITH_FUTURE_VERSION",
+  "version": "0.1.0-rc.2",
   "license": "MIT",
+  "access_right": "open",
   "related_identifiers": [
-    { "identifier": "REPLACE_WITH_FUTURE_RELEASE_URL", "relation": "isSupplementTo", "scheme": "url" }
+    {
+      "identifier": "https://github.com/xHaMMaDy/Qsarify-Core/releases/tag/v0.1.0-rc.2",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
   ],
-  "notes": "Template only. Zenodo assigns the DOI after deposit; do not invent or pre-fill it."
+  "notes": "Zenodo assigns the DOI after deposit; no DOI is pre-filled."
 }
